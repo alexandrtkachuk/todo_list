@@ -12,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Event
 {
+
+
     /**
      * @var int
      *
@@ -75,5 +77,24 @@ class Event
         return false;
     }
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="userId", type="integer")
+     * */
+    private $userId;
+
+    /**
+     * @return int
+     * */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+    }
 }
 

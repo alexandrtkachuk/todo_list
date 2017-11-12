@@ -70,5 +70,33 @@ swiftmailer:
 
 easy_admin:
     entities:
-        - AppBundle\Entity\Event
+        Event:
+            class: AppBundle\Entity\Event
+            label: 'Events' #справа как называеться
+            list:
+              fields: ['name', 'date']
+              #dql_filter: 'entity.userId = app.getUser.getId%'
+              #dql_filter: 'entity.userId = 1'
+              title: "Events"
+              help: 'The list view overrides the global help message'
+            new:
+              fields: ['name']
+              title: 'Add Event'
+              name: 'Some name'
+            disabled_actions: ['edit', 'delete']
+
+
+
+
+
+        #- AppBundle\Entity\User
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
+
 

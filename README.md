@@ -10,3 +10,8 @@ TODO List
     - срок, а может не иметь.,  
     - статус done or not
     - дату начала, а также дату создания
+    
+    
+
+Other: 
+ - Создание Юзеров и прочего тут http://symfony.com/doc/2.0/bundles/FOSUserBundle/command_line_tools.html
