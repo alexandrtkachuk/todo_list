@@ -17,6 +17,4 @@ composer.lock
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-/bin/
-/bin/*
 
