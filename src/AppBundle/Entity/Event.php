@@ -36,6 +36,11 @@ class Event
 
     private $date;
 
+    public function __construct()
+    {
+        $this->isDone = false;
+    }
+
     /**
      * Get id
      *
@@ -96,5 +101,47 @@ class Event
     {
         $this->userId = $userId;
     }
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isDone", type="boolean")
+     * */
+    private $isDone;
+
+    public function getIsDone()
+    {
+        return $this->isDone;
+    }
+
+    public function setIsDone($isDone)
+    {
+        $this->isDone = $isDone;
+    }
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $dateEnd;
+
+    /**
+     * @param mixed $dateEnd
+     */
+    public function setDateEnd($dateEnd)
+    {
+        $this->dateEnd = $dateEnd;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateEnd()
+    {
+        return $this->dateEnd;
+    }
+
+
+
+
 }
 
